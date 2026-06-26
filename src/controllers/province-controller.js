@@ -34,7 +34,11 @@ router.post('/', async (req, res) => {
         const province = await service.create(data);
         res.status(201).json(province);
     } catch (err) {
-        res.status(err.status || 500).json({ message: err.message });
+        if (err.status === 400) {
+            res.status(400).json({ message: err.message });
+        } else {
+            res.status(500).json({ message: err.message });
+        }
     }
 });
 
@@ -50,7 +54,11 @@ router.put('/', async (req, res) => {
 
         res.status(201).json(province);
     } catch (err) {
-        res.status(err.status || 500).json({ message: err.message });
+        if (err.status === 400) {
+            res.status(400).json({ message: err.message });
+        } else {
+            res.status(500).json({ message: err.message });
+        }
     }
 });
 

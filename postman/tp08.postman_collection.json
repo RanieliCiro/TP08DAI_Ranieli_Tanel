@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "30ffb053-60b8-41e7-95dd-7b841698e8be",
+		"name": "tp08",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/province",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"province"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Chaco\",\r\n    \"full_name\": \"Provincia de Chaco\",\r\n    \"latitude\": -24.895086288452148,\r\n    \"longitude\": -59.93218994140625,\r\n    \"display_order\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/province",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"province"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/province/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"province",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Chaco Modificado\",\r\n    \"full_name\": \"Provincia de Chaco Modificada\",\r\n    \"latitude\": -24.895086288452148,\r\n    \"longitude\": -59.93218994140625,\r\n    \"display_order\": 200\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/province",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"province"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - DeleteById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/province/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"province",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

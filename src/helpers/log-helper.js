@@ -14,7 +14,13 @@ class LogHelper {
     logError = (errorObject) => {
 
         const timestamp = new Date().toISOString();
-        const mensaje   = `${timestamp}: ${errorObject.message}\nStack Trace:\n${errorObject.stack}\n\n`;
+
+        let severity = 'error';
+        if (errorObject.severity) {
+            severity = errorObject.severity.toLowerCase();
+        }
+
+        const mensaje = `${timestamp}: ${severity} - ${errorObject.message}\n\nStack Trace:\n\n${errorObject.stack}\n\n`;
 
         if (this.logToConsoleEnabled) {
             console.error(mensaje);
